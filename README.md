@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Joko UI
+
+![](https://img.shields.io/github/stars/rayasabari/joko-ui?style=social) ![](https://img.shields.io/github/issues/rayasabari/joko-ui) ![](https://img.shields.io/github/license/rayasabari/joko-ui)
+
+Joko UI is a collection of free Tailwind CSS components that can be used in your next project. With a range of copy-paste ready components, you can build your next marketing website, admin dashboard, eCommerce store and much more without installing any heavy dependencies.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Components](#components)
+  - [📱 Application](#application)
+  - [📣 Marketing](#marketing)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+There is no Joko UI installation. If you have a Tailwind CSS project, you can simply copy the code and paste it into your project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+It is designed to be:
+- **No Config**: Works with standard Tailwind setup.
+- **No Install**: No npm packages to manage.
+- **No Setup**: Just copy, paste, and customize.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Browse the website for the components you need, copy the code and paste it into your project.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  Browse the website for a component you like.
+2.  Preview the component at different breakpoints (Mobile, Tablet, Desktop).
+3.  Toggle **Dark Mode** to see how it looks in dark themes.
+4.  Click on the **'Code'** tab or the **'Copy Code'** button to get the source.
+5.  Paste the copied code into your project.
 
-## Learn More
+> [!NOTE]
+> All components support both Light and Dark modes out of the box using Tailwind's `dark:` modifier.
 
-To learn more about Next.js, take a look at the following resources:
+## Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Joko UI has a growing collection of freely available components:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### [📱 Application](/components/application)
+UI components for building functional web applications:
+- Authentication Forms
+- Dashboards
+- Settings Pages
+- Data Displays
 
-## Deploy on Vercel
+### [📣 Marketing](/components/marketing)
+Components for building high-converting landing pages:
+- Hero Sections
+- Feature Grids
+- Pricing Tables
+- Footers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can contribute by adding new components, fixing bugs or improving the documentation. Please create an issue before starting any work. Once you get approval on your issue, you can create a new branch and submit your changes in a PR.
+
+## License
+
+Joko UI is an open source project licensed under the [MIT license](LICENSE).
