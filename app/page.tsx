@@ -48,7 +48,7 @@ export default function Home() {
 
             {/* Heading */}
             <div className="flex items-center gap-1 justify-center mb-6">
-              <IconFlower size={100} className='text-primary' />
+              <IconFlower size={100} className='text-primary animate-spin [animation-duration:5s]' />
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground  leading-tight">
                 Joko
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
