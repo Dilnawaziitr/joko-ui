@@ -48,8 +48,8 @@ export default function Home() {
 
             {/* Heading */}
             <div className="flex items-center gap-1 justify-center mb-6">
-              <IconFlower size={100} className='text-primary animate-spin [animation-duration:5s]' />
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground  leading-tight">
+              <IconFlower className='size-[55px] sm:size-[64px] md:size-[78px] lg:size-[98px] text-primary animate-spin [animation-duration:5s]' />
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground  leading-tight">
                 Joko
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   UI
