@@ -1,0 +1,167 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { IconSearch, IconX, IconToggleRight, IconCards, IconBell } from '@tabler/icons-react';
+
+interface ComponentDialogProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function ComponentDialog({ isOpen, onClose }: ComponentDialogProps) {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const allComponents = [
+    {
+      id: 1,
+      name: 'Buttons',
+      category: 'Application',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: <IconToggleRight stroke={1.5} />,
+      variantsCount: 6
+    },
+    {
+      id: 2,
+      name: 'Cards',
+      category: 'Marketing',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: <IconCards stroke={1.5} />,
+      variantsCount: 4
+    },
+    {
+      id: 3,
+      name: 'Alerts',
+      category: 'Marketing',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      icon: <IconBell stroke={1.5} />,
+      variantsCount: 4
+    }
+  ];
+
+  const filteredComponents = allComponents.filter(comp =>
+    comp.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    comp.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    comp.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  const dialogContent = (
+    <>
+      {/* Blur Overlay */}
+      <div 
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998] transition-opacity duration-300"
+        onClick={onClose}
+        aria-hidden="true"
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+      />
+
+      {/* Dialog */}
+      <div 
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+      >
+        <div 
+          className="bg-white dark:bg-gray-800 w-full max-w-4xl max-h-[85vh] flex flex-col overflow-hidden rounded-xl shadow-lg animate-in fade-in zoom-in-95 duration-300"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Header with Search */}
+          <div className="p-6 border-b border-border">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold text-foreground">
+                Browse Components
+              </h2>
+              <button
+                onClick={onClose}
+                className="p-2 rounded-lg hover:bg-muted transition-colors"
+              >
+                <IconX size={24} className="text-muted-foreground" />
+              </button>
+            </div>
+            
+            {/* Search Bar */}
+            <div className="relative">
+              <IconSearch 
+                size={20} 
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" 
+              />
+              <input
+                type="text"
+                placeholder="Search components..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                autoFocus
+              />
+            </div>
+          </div>
+
+          {/* Components List */}
+          <div className="flex-1 overflow-y-auto p-6">
+            {filteredComponents.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filteredComponents.map((component) => (
+                  <div
+                    key={component.id}
+                    className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <span className="text-3xl text-primary">{component.icon}</span>
+                      <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                        {component.variantsCount} variants
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      {component.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                      {component.description}
+                    </p>
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                      {component.category}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div />
+            )}
+          </div>
+
+          {/* Footer */}
+          <div className="p-4 border-t border-border bg-muted/30">
+            <div className="flex items-center justify-between text-sm text-muted-foreground">
+              <span>
+                {filteredComponents.length} component{filteredComponents.length !== 1 ? 's' : ''} available
+              </span>
+              <span className="text-xs">
+                Press <kbd className="px-2 py-1 rounded bg-background border border-border">ESC</kbd> to close
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+
+  return createPortal(dialogContent, document.body);
+}
