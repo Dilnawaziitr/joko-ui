@@ -105,7 +105,7 @@ export const applicationComponents: ComponentType[] = [
         name: 'Ripple Button',
         code: `<button class="relative px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg shadow-lg overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95">
   <span class="relative z-10">Ripple Button</span>
-  <div class="absolute inset-0 bg-white opacity-0 group-active:opacity-30 rounded-full scale-0 group-active:scale-150 transition-all duration-300 origin-center"></div>
+  <div class=""absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] rounded-full bg-white/40 pointer-events-none transform scale-100 opacity-0 transition-all duration-700 ease-out group-active:scale-0 group-active:opacity-100 group-active:transition-none""></div>
 </button>`,
       },
       {
