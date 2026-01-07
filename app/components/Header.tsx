@@ -133,6 +133,7 @@ export default function Header() {
                 href="/components/application"
                 className="px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
+                prefetch={false}
               >
                 Application Components
               </Link>
@@ -140,6 +141,7 @@ export default function Header() {
                 href="/components/marketing"
                 className="px-4 py-2 rounded-xl hover:bg-secondary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
+                prefetch={false}
               >
                 Marketing Components
               </Link>
@@ -159,9 +161,9 @@ export default function Header() {
       </div>
 
       {/* Component Search Dialog */}
-      <SearchDialog 
-        isOpen={isDialogOpen} 
-        onClose={() => setIsDialogOpen(false)} 
+      <SearchDialog
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
       />
     </header>
   );
