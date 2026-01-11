@@ -4,6 +4,7 @@ import { ComponentType } from '../types';
 export const progress: ComponentType = {
   slug: 'progress',
   name: 'Progress',
+<<<<<<< HEAD
   icon: <IconLoader2 stroke={ 1.5} />,
   description: 'Progress bar components to show task completion status',
   pagination: {
@@ -12,6 +13,10 @@ export const progress: ComponentType = {
     showPageNumbers: true,
     showInfo: true
   },
+=======
+  icon: <IconLoader2 stroke={1.5} />,
+  description: 'Progress bar components to show task completion status',
+>>>>>>> upstream/development
   variants: [
     {
       id: 'progress-basic',
@@ -19,6 +24,7 @@ export const progress: ComponentType = {
       code: `<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
   <div class="bg-lime-600 h-2.5 rounded-full" style="width: 45%"></div>
 </div>`,
+      contributor: 'faishalmhmd',
     },
     {
       id: 'progress-label',
@@ -32,6 +38,7 @@ export const progress: ComponentType = {
     <div class="bg-lime-600 h-4 rounded-full text-[10px] font-bold text-white flex items-center justify-center transition-all duration-500" style="width: 70%">70%</div>
   </div>
 </div>`,
+      contributor: 'faishalmhmd',
     },
     {
       id: 'progress-animated',
@@ -41,6 +48,7 @@ export const progress: ComponentType = {
     <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
   </div>
 </div>`,
+      contributor: 'faishalmhmd',
     },
     {
       id: 'progress-gradient',
@@ -48,6 +56,7 @@ export const progress: ComponentType = {
       code: `<div class="w-full bg-gray-200 rounded-full h-3 dark:bg-gray-700 overflow-hidden">
   <div class="bg-gradient-to-r from-lime-500 via-green-500 to-emerald-500 h-full rounded-full" style="width: 85%"></div>
 </div>`,
+      contributor: 'faishalmhmd',
     },
     {
       id: 'progress-sizes',
@@ -63,6 +72,7 @@ export const progress: ComponentType = {
     <div class="bg-lime-600 h-6 rounded-full" style="width: 70%"></div>
   </div>
 </div>`,
+      contributor: 'faishalmhmd',
     }
   ],
 };

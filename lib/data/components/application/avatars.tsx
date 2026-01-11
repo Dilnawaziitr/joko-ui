@@ -4,6 +4,7 @@ import { ComponentType } from '../types';
 export const avatars: ComponentType = {
   slug: 'avatars',
   name: 'Avatars',
+<<<<<<< HEAD
   icon: <IconUserCircle stroke={ 1.5} />,
   description: 'Avatar components for user profiles',
   pagination: {
@@ -12,6 +13,10 @@ export const avatars: ComponentType = {
     showPageNumbers: true,
     showInfo: true
   },
+=======
+  icon: <IconUserCircle stroke={1.5} />,
+  description: 'Avatar components for user profiles',
+>>>>>>> upstream/development
   variants: [
     {
       id: 'avatar-sizes',
@@ -22,6 +27,7 @@ export const avatars: ComponentType = {
   <div class="w-12 h-12 rounded-full bg-gradient-to-br from-lime-500 to-lime-600 flex items-center justify-center text-white font-medium">JD</div>
   <div class="w-16 h-16 rounded-full bg-gradient-to-br from-lime-500 to-lime-600 flex items-center justify-center text-white text-xl font-medium">JD</div>
 </div>`,
+      contributor: 'rayasabari',
     },
     {
       id: 'avatar-status',
@@ -40,6 +46,7 @@ export const avatars: ComponentType = {
     <span class="absolute bottom-0 right-0 w-3 h-3 bg-red-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
   </div>
 </div>`,
+      contributor: 'rayasabari',
     },
     {
       id: 'avatar-group',
@@ -50,6 +57,7 @@ export const avatars: ComponentType = {
   <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white text-sm font-medium ring-2 ring-white dark:ring-gray-800">C</div>
   <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 text-sm font-medium ring-2 ring-white dark:ring-gray-800">+5</div>
 </div>`,
+      contributor: 'rayasabari',
     },
   ],
 };
