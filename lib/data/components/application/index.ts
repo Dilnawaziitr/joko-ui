@@ -1,5 +1,6 @@
 import { ComponentType } from '../types';
 import { buttons } from './buttons';
+import { navbars } from './navbars';
 import { cards } from './cards';
 import { alerts } from './alerts';
 import { forms } from './forms';
@@ -21,4 +22,5 @@ export const applicationComponents: ComponentType[] = [
   skeleton,
   loaders,
   description_list,
+  navbars,
 ];
