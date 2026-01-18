@@ -1,6 +1,5 @@
 import { ComponentType } from '../types';
 import { buttons } from './buttons';
-import { navbars } from './navbars';
 import { cards } from './cards';
 import { alerts } from './alerts';
 import { forms } from './forms';
@@ -12,6 +11,7 @@ import { loaders } from './loaders';
 import { description_list } from './description-list';
 import { breadcrumbs } from './breadcrumbs';
 import { sidebars } from './sidebars';
+import { navbars } from './navbars';
 
 export const applicationComponents: ComponentType[] = [
   buttons,
@@ -24,7 +24,7 @@ export const applicationComponents: ComponentType[] = [
   skeleton,
   loaders,
   description_list,
-  navbars,
   breadcrumbs,
   sidebars,
+  navbars,
 ];
